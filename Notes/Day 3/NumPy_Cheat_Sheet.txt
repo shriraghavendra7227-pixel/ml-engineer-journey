@@ -1,0 +1,128 @@
+NumPy Cheat Sheet
+
+Import
+
+    import numpy as np
+
+Creating Arrays
+
+-   np.array([1,2,3]) → 1D array
+-   np.array([[1,2],[3,4]]) → 2D array
+-   np.zeros((2,3)) → Matrix of zeros
+-   np.ones((2,3)) → Matrix of ones
+-   np.eye(3) → 3×3 identity matrix
+-   np.arange(1,11) → Numbers from 1 to 10
+-   np.linspace(0,10,5) → 5 evenly spaced numbers
+
+Shape
+
+    arr.shape
+
+Returns (rows, columns)
+
+Dimensions
+
+    arr.ndim
+
+-   [1,2,3] → 1D
+-   [[1,2],[3,4]] → 2D
+-   [[[1]]] → 3D
+
+Memory trick: - [ ] → 1D - [[ ]] → 2D - [[[ ]]] → 3D
+
+Size
+
+    arr.size
+
+Returns total number of elements.
+
+Data Type
+
+    arr.dtype
+
+Indexing
+
+    arr[0]
+    arr[1,0]
+
+Slicing
+
+    arr[1:4]
+    arr[:,1:]
+    arr[1:,1:]
+
+Example:
+
+    arr = np.array([
+        [1,2,3],
+        [4,5,6]
+    ])
+
+    print(arr[1:,1:])
+
+Output:
+
+    [[5 6]]
+
+Reshape
+
+    arr = np.arange(12)
+    arr = arr.reshape(3,4)
+
+Rule: - Total number of elements must remain the same.
+
+Operations
+
+    a + b
+    a - b
+    a * b
+    a / b
+
+Scalar Operations
+
+    a + 10
+    a * 5
+
+Useful Functions
+
+-   arr.sum()
+-   arr.mean()
+-   arr.max()
+-   arr.min()
+-   arr.argmax()
+-   arr.argmin()
+-   arr.sort()
+
+Important Attributes
+
+-   shape
+-   ndim
+-   size
+-   dtype
+
+Interview Difference
+
+Given:
+
+    arr = np.array([
+        [1,2,3],
+        [4,5,6]
+    ])
+
+-   arr.shape → (2,3)
+-   arr.ndim → 2
+-   arr.size → 6
+
+Must Remember
+
+-   np.array()
+-   np.zeros()
+-   np.ones()
+-   np.eye()
+-   np.arange()
+-   arr.shape
+-   arr.ndim
+-   arr.size
+-   arr.dtype
+-   arr[row, col]
+-   arr.reshape()
